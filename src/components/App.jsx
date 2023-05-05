@@ -46,15 +46,13 @@ class App extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
 
-  
-
   render() {
     const normalizeFilter = this.state.filter.toLowerCase();
     const visibleFilter = this.state.contacts.filter(contacts =>
       contacts.name.toLowerCase().includes(normalizeFilter)
     );
 
-    const { contacts, filter } = this.state;
+    const { filter } = this.state;
 
     return (
       <div className={css.style}>

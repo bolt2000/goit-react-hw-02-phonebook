@@ -1,14 +1,8 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 
-
-
-
-
-
 const ContactsList = ({ contactList, ondeleteContact }) => {
-  // console.log(contactList);
   return (
     <ul className={css.List}>
       {contactList.map(({ id, name, number }) => (
@@ -29,19 +23,16 @@ const ContactsList = ({ contactList, ondeleteContact }) => {
     </ul>
   );
 };
-;
 
-
-// ContactsList.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.exact({
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//       id: PropTypes.string.isRequired,
-//     })
-//   ),
-//   onDeleteContact: PropTypes.func.isRequired,
-// };
-
+ContactsList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ),
+  onDeleteContact: PropTypes.func.isRequired,
+};
 
 export default ContactsList;

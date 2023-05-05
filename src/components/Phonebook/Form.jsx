@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// import shortid from "shortid";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './Form.module.css';
-
-
 
 const INITIAL_STATE = {
   name: '',
@@ -11,14 +8,9 @@ const INITIAL_STATE = {
 };
 
 class Phonebook extends Component {
-  
-
   state = {
     ...INITIAL_STATE,
   };
-
-  // nameInputId = shortid.generate();
-  // numberInputId = shortid.generate();
 
   handleChange = e => {
     const { name, value } = e.currentTarget;
@@ -28,23 +20,19 @@ class Phonebook extends Component {
 
   handleSumbit = e => {
     e.preventDefault();
-    // console.log(this.state);
     this.props.onSubmit(this.state);
-    // this.setState({ ...INITIAL_STATE });
     this.reset();
   };
 
   onSubmit = e => {
     e.preventDefault();
     const contact = {
-      // id: shortid.generate(),
       name: this.state.name,
       number: this.state.number,
     };
     this.props.onSubmit(contact);
     this.reset();
   };
-
 
   reset = () => {
     this.setState({ name: '', number: '' });
@@ -64,7 +52,6 @@ class Phonebook extends Component {
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
-            // id={this.nameInputId}
           />
         </label>
 
@@ -79,7 +66,6 @@ class Phonebook extends Component {
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
-            // id={this.numberInputId}
           />
         </label>
         <button
@@ -90,17 +76,12 @@ class Phonebook extends Component {
           Add contact
         </button>
       </form>
-      
     );
   }
 }
 
-
-
-
-
-// Phonebook.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
+Phonebook.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Phonebook;

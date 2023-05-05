@@ -4,7 +4,7 @@
   padding: 1%;
 }
 .ContactItem {
-    width: 450px;
+  width: 450px;
   padding: 5px;
   border: 1px solid black;
   border-radius: 2px;
@@ -27,8 +27,6 @@
   margin-left: 15px;
 }
 
-
-
 .button {
   cursor: pointer;
   /* border-radius: 5px; */
@@ -46,7 +44,6 @@
   color: white;
   background-color: red;
   border: 3px solid black;
-
 }
 
 .button span {
