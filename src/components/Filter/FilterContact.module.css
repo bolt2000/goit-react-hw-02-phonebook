@@ -1,0 +1,27 @@
+.Label {
+  margin-top: 20px;
+  list-style: none;
+  padding: 1%;
+  display: block;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+.Input {
+  /* margin-top: 20px; */
+  list-style: none;
+  padding: 1%;
+  /* display: block; */
+  margin-left: 20px;
+  width: 200px;
+}
+
+.Span {
+  /* margin-top: 20px; */
+  font-size: 20px;
+  font-weight: 700;
+  list-style: none;
+  padding: 1%;
+  /* display: block; */
+  /* margin-left: auto; */
+}
